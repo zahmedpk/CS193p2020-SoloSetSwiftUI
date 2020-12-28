@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D10C7E82597FD020074C5FF /* SoloSetSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10C7E72597FD020074C5FF /* SoloSetSwiftUIApp.swift */; };
+		3D10C7EA2597FD020074C5FF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10C7E92597FD020074C5FF /* GameView.swift */; };
+		3D10C7EC2597FD030074C5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D10C7EB2597FD030074C5FF /* Assets.xcassets */; };
+		3D10C7EF2597FD030074C5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D10C7EE2597FD030074C5FF /* Preview Assets.xcassets */; };
+		3DAA886C25997839009471EA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAA886A25997839009471EA /* CardView.swift */; };
+		3DDA5BEF2599755D00B471D8 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */; };
+		3DDA5BF2259975B300B471D8 /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BF1259975B300B471D8 /* RectangleShape.swift */; };
+		3DDA5BF92599762C00B471D8 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BF82599762C00B471D8 /* ShapeView.swift */; };
+		3DDA5BFC2599769400B471D8 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BFB2599769400B471D8 /* ViewConstants.swift */; };
+		3DF4618025998084009CAAEE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF4617F25998084009CAAEE /* Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D10C7E42597FD020074C5FF /* SoloSetSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoloSetSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D10C7E72597FD020074C5FF /* SoloSetSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloSetSwiftUIApp.swift; sourceTree = "<group>"; };
+		3D10C7E92597FD020074C5FF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		3D10C7EB2597FD030074C5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D10C7EE2597FD030074C5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D10C7F02597FD030074C5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAA886A25997839009471EA /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
+		3DDA5BF1259975B300B471D8 /* RectangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
+		3DDA5BF82599762C00B471D8 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		3DDA5BFB2599769400B471D8 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		3DF4617F25998084009CAAEE /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D10C7E12597FD020074C5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D10C7DB2597FD020074C5FF = {
+			isa = PBXGroup;
+			children = (
+				3D10C7E62597FD020074C5FF /* SoloSetSwiftUI */,
+				3D10C7E52597FD020074C5FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D10C7E52597FD020074C5FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D10C7E42597FD020074C5FF /* SoloSetSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D10C7E62597FD020074C5FF /* SoloSetSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3DAA886F25997888009471EA /* Views */,
+				3DB2C78C2599797B007A3A5A /* Model */,
+				3D10C7E72597FD020074C5FF /* SoloSetSwiftUIApp.swift */,
+				3D10C7EB2597FD030074C5FF /* Assets.xcassets */,
+				3D10C7F02597FD030074C5FF /* Info.plist */,
+				3D10C7ED2597FD030074C5FF /* Preview Content */,
+			);
+			path = SoloSetSwiftUI;
+			sourceTree = "<group>";
+		};
+		3D10C7ED2597FD030074C5FF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3D10C7EE2597FD030074C5FF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3DAA886F25997888009471EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DAA886A25997839009471EA /* CardView.swift */,
+				3D10C7E92597FD020074C5FF /* GameView.swift */,
+				3DDA5BFB2599769400B471D8 /* ViewConstants.swift */,
+				3DDA5BF82599762C00B471D8 /* ShapeView.swift */,
+				3DDA5BF1259975B300B471D8 /* RectangleShape.swift */,
+				3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DB2C78C2599797B007A3A5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DF4617F25998084009CAAEE /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D10C7E32597FD020074C5FF /* SoloSetSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D10C7F32597FD030074C5FF /* Build configuration list for PBXNativeTarget "SoloSetSwiftUI" */;
+			buildPhases = (
+				3D10C7E02597FD020074C5FF /* Sources */,
+				3D10C7E12597FD020074C5FF /* Frameworks */,
+				3D10C7E22597FD020074C5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoloSetSwiftUI;
+			productName = SoloSetSwiftUI;
+			productReference = 3D10C7E42597FD020074C5FF /* SoloSetSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D10C7DC2597FD020074C5FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					3D10C7E32597FD020074C5FF = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 3D10C7DF2597FD020074C5FF /* Build configuration list for PBXProject "SoloSetSwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D10C7DB2597FD020074C5FF;
+			productRefGroup = 3D10C7E52597FD020074C5FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D10C7E32597FD020074C5FF /* SoloSetSwiftUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D10C7E22597FD020074C5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D10C7EF2597FD030074C5FF /* Preview Assets.xcassets in Resources */,
+				3D10C7EC2597FD030074C5FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D10C7E02597FD020074C5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D10C7EA2597FD020074C5FF /* GameView.swift in Sources */,
+				3DF4618025998084009CAAEE /* Card.swift in Sources */,
+				3DAA886C25997839009471EA /* CardView.swift in Sources */,
+				3DDA5BEF2599755D00B471D8 /* DiamondShape.swift in Sources */,
+				3DDA5BF2259975B300B471D8 /* RectangleShape.swift in Sources */,
+				3D10C7E82597FD020074C5FF /* SoloSetSwiftUIApp.swift in Sources */,
+				3DDA5BFC2599769400B471D8 /* ViewConstants.swift in Sources */,
+				3DDA5BF92599762C00B471D8 /* ShapeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3D10C7F12597FD030074C5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D10C7F22597FD030074C5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D10C7F42597FD030074C5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SoloSetSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = GC67KCDQ59;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SoloSetSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zahmedpk.SoloSetSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D10C7F52597FD030074C5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SoloSetSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = GC67KCDQ59;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SoloSetSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zahmedpk.SoloSetSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D10C7DF2597FD020074C5FF /* Build configuration list for PBXProject "SoloSetSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D10C7F12597FD030074C5FF /* Debug */,
+				3D10C7F22597FD030074C5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D10C7F32597FD030074C5FF /* Build configuration list for PBXNativeTarget "SoloSetSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D10C7F42597FD030074C5FF /* Debug */,
+				3D10C7F52597FD030074C5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D10C7DC2597FD020074C5FF /* Project object */;
+}
