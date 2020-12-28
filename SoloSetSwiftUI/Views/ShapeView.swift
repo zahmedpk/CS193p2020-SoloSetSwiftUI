@@ -3,7 +3,7 @@
 //  SoloSetSwiftUI
 //
 //  Created by Zubair Ahmed on 28/12/2020.
-//  Draws a rectangle, diamond or capsule
+//  Draws a rectangle, diamond or stadium
 import SwiftUI
 
 struct ShapeView: Shape {
@@ -16,7 +16,7 @@ struct ShapeView: Shape {
         case .B:
             p = RectangleShape().path(in: rect)
         case .C:
-            p = Capsule().path(in: rect)
+            p = StadiumShape().path(in: rect)
         }
         return p
     }

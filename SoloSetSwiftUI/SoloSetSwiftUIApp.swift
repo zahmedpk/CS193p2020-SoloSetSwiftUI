@@ -11,7 +11,7 @@ import SwiftUI
 struct SoloSetSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView()
+            GameView(setGameViewModel: SetGameViewModel())
         }
     }
 }

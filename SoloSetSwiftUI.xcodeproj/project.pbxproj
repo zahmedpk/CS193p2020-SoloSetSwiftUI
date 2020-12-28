@@ -11,6 +11,11 @@
 		3D10C7EA2597FD020074C5FF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10C7E92597FD020074C5FF /* GameView.swift */; };
 		3D10C7EC2597FD030074C5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D10C7EB2597FD030074C5FF /* Assets.xcassets */; };
 		3D10C7EF2597FD030074C5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D10C7EE2597FD030074C5FF /* Preview Assets.xcassets */; };
+		3D9C2D57259991AD000A6D9D /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C2D56259991AD000A6D9D /* SetGameViewModel.swift */; };
+		3D9C2D5A259991F5000A6D9D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C2D59259991F5000A6D9D /* GridView.swift */; };
+		3D9C2D5E2599940F000A6D9D /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C2D5D2599940F000A6D9D /* SetGame.swift */; };
+		3D9C2D6225999B16000A6D9D /* StadiumShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C2D6125999B16000A6D9D /* StadiumShape.swift */; };
+		3D9C2D652599AD23000A6D9D /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C2D642599AD23000A6D9D /* GridLayout.swift */; };
 		3DAA886C25997839009471EA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAA886A25997839009471EA /* CardView.swift */; };
 		3DDA5BEF2599755D00B471D8 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */; };
 		3DDA5BF2259975B300B471D8 /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA5BF1259975B300B471D8 /* RectangleShape.swift */; };
@@ -26,6 +31,11 @@
 		3D10C7EB2597FD030074C5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D10C7EE2597FD030074C5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D10C7F02597FD030074C5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9C2D56259991AD000A6D9D /* SetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
+		3D9C2D59259991F5000A6D9D /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		3D9C2D5D2599940F000A6D9D /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		3D9C2D6125999B16000A6D9D /* StadiumShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumShape.swift; sourceTree = "<group>"; };
+		3D9C2D642599AD23000A6D9D /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		3DAA886A25997839009471EA /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
 		3DDA5BF1259975B300B471D8 /* RectangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 		3D10C7E62597FD020074C5FF /* SoloSetSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3D9C2D56259991AD000A6D9D /* SetGameViewModel.swift */,
 				3DAA886F25997888009471EA /* Views */,
 				3DB2C78C2599797B007A3A5A /* Model */,
 				3D10C7E72597FD020074C5FF /* SoloSetSwiftUIApp.swift */,
@@ -85,12 +96,15 @@
 		3DAA886F25997888009471EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3DAA886A25997839009471EA /* CardView.swift */,
 				3D10C7E92597FD020074C5FF /* GameView.swift */,
+				3DAA886A25997839009471EA /* CardView.swift */,
 				3DDA5BFB2599769400B471D8 /* ViewConstants.swift */,
 				3DDA5BF82599762C00B471D8 /* ShapeView.swift */,
 				3DDA5BF1259975B300B471D8 /* RectangleShape.swift */,
+				3D9C2D6125999B16000A6D9D /* StadiumShape.swift */,
 				3DDA5BEE2599755D00B471D8 /* DiamondShape.swift */,
+				3D9C2D59259991F5000A6D9D /* GridView.swift */,
+				3D9C2D642599AD23000A6D9D /* GridLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF4617F25998084009CAAEE /* Card.swift */,
+				3D9C2D5D2599940F000A6D9D /* SetGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,12 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9C2D5E2599940F000A6D9D /* SetGame.swift in Sources */,
+				3D9C2D5A259991F5000A6D9D /* GridView.swift in Sources */,
 				3D10C7EA2597FD020074C5FF /* GameView.swift in Sources */,
+				3D9C2D57259991AD000A6D9D /* SetGameViewModel.swift in Sources */,
 				3DF4618025998084009CAAEE /* Card.swift in Sources */,
 				3DAA886C25997839009471EA /* CardView.swift in Sources */,
+				3D9C2D652599AD23000A6D9D /* GridLayout.swift in Sources */,
 				3DDA5BEF2599755D00B471D8 /* DiamondShape.swift in Sources */,
 				3DDA5BF2259975B300B471D8 /* RectangleShape.swift in Sources */,
 				3D10C7E82597FD020074C5FF /* SoloSetSwiftUIApp.swift in Sources */,
+				3D9C2D6225999B16000A6D9D /* StadiumShape.swift in Sources */,
 				3DDA5BFC2599769400B471D8 /* ViewConstants.swift in Sources */,
 				3DDA5BF92599762C00B471D8 /* ShapeView.swift in Sources */,
 			);

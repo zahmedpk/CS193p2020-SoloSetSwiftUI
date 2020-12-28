@@ -6,9 +6,13 @@
     //  Provide a View for Card
     import SwiftUI
     
-    struct CardView: View {
+    struct CardView: View, Identifiable, Hashable {
+        var id: Int {
+            return card.id
+        }
+        
         // Draw a Card object
-        // Card.Shape: .A is Diamond, .B is Rectangle, .C is Capsule
+        // Card.Shape: .A is Diamond, .B is Rectangle, .C is Stadium
         // Card.Color: .A is Red, .B is Green, .C is Purple
         // Card.Shading .A is Outline, .B is Stripes(partially transparent), .C is fill
         let card: Card
@@ -50,6 +54,7 @@
                     })
                     .padding(geometry.size.width > 100 ? 10: 5)
                 }.aspectRatio(ViewConstants.cardAspectRatio, contentMode: .fit)
+                .padding(3)
             }
         }
     }

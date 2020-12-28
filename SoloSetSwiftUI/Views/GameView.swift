@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct GameView: View {
+    @ObservedObject var setGameViewModel: SetGameViewModel
     var body: some View {
-        VStack {
-            // Throw in some cards to test views
-            CardView(card: Card(shape: .A, shading: .A, number: .Two, color: .A, id: 1))
-                .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            CardView(card: Card(shape: .B, shading: .B, number: .One, color: .B, id: 2))
-                .frame(width: 200, height: 200, alignment: .center)
-            CardView(card: Card(shape: .C, shading: .C, number: .Three, color: .C, id: 3))
-                .frame(width: 100, height: 100, alignment: .center)
-            CardView(card: Card(shape: .A, shading: .A, number: .Two, color: .A, id: 4))
-                .frame(width: 200, height: 200, alignment: .center)
+        Group {
+            GeometryReader {
+                geometry in
+                GridView(
+                    items: setGameViewModel.cards.map {
+                        card -> CardView in
+                        let cv = CardView(card: card)
+                        return cv
+                    },
+                    frameCalculator: GridLayout(itemCount: setGameViewModel.cards.count, nearAspectRatio: Double(ViewConstants.cardAspectRatio), in: geometry.size))
+            }
         }
+        .padding(3)
+        
+        Button("Deal More Cards", action: {
+            setGameViewModel.dealMoreCards()
+        })
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(setGameViewModel: SetGameViewModel())
     }
 }

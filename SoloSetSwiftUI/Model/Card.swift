@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Equatable, CustomStringConvertible {
+struct Card: Equatable, CustomStringConvertible, Identifiable {
     //A single card representing one of the 81 permutations of shape, shading, number and color.
     // each of these four features can take one of 3 possible values, i.e 0, 1, 2
     let shape: Shape
