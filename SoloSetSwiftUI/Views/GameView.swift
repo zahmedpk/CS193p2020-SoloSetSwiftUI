@@ -14,12 +14,10 @@ struct GameView: View {
             GeometryReader {
                 geometry in
                 GridView(
-                    items: setGameViewModel.cards.map {
-                        card -> CardView in
-                        let cv = CardView(card: card)
-                        return cv
-                    },
-                    frameCalculator: GridLayout(itemCount: setGameViewModel.cards.count, nearAspectRatio: Double(ViewConstants.cardAspectRatio), in: geometry.size))
+                    items: setGameViewModel.cards.map {cardView(for: $0)},
+                    frameCalculator: GridLayout(itemCount: setGameViewModel.cards.count, nearAspectRatio: Double(ViewConstants.cardAspectRatio), in: geometry.size),
+                    viewModel: setGameViewModel
+                )
             }
         }
         .padding(3)
@@ -27,6 +25,10 @@ struct GameView: View {
         Button("Deal More Cards", action: {
             setGameViewModel.dealMoreCards()
         })
+    }
+    func cardView(for card: Card) -> CardView {
+        let cv = CardView(card: card, selectionStatus: setGameViewModel.selectionStatus(of: card), viewModel: setGameViewModel)
+        return cv
     }
 }
 

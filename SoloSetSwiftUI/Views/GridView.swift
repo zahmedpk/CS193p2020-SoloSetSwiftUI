@@ -10,17 +10,8 @@ import SwiftUI
 struct GridView<GridItem>: View where GridItem: Identifiable,  GridItem: View, GridItem: Hashable {
     let items: [GridItem]
     let frameCalculator: GridLayout
+    let viewModel: SetGameViewModel
     var body: some View {
-//        ForEach(0..<items.count){
-//            index in
-//            items[index]
-//                .position(frameCalculator.location(ofItemAt: index))
-//                .frame(width: frameCalculator.itemSize.width, height: frameCalculator.itemSize.height, alignment: .top)
-//                .onTapGesture {
-//                    // TODO: remove it
-//                    print("card \(items[index]) was tapped")
-//                }
-//        }
         ForEach(items, id: \.self) {
             item in
             item
@@ -29,8 +20,3 @@ struct GridView<GridItem>: View where GridItem: Identifiable,  GridItem: View, G
         }
     }
 }
-
-//struct CardsGridView_Previews: PreviewProvider {
-//    static var previews: some View {
-//    }
-//}

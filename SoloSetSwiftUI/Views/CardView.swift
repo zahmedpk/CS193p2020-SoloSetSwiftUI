@@ -17,8 +17,11 @@
         // Card.Shading .A is Outline, .B is Stripes(partially transparent), .C is fill
         let card: Card
         let color: Color
-        init(card: Card) {
+        let borderColor: Color
+        let viewModel: SetGameViewModel
+        init(card: Card, selectionStatus: SelectionStatus, viewModel: SetGameViewModel) {
             self.card = card
+            self.viewModel = viewModel
             switch card.color {
             case .A:
                 color = Color.red
@@ -27,13 +30,24 @@
             case .C:
                 color = Color.purple
             }
+            
+            switch selectionStatus {
+            case .None:
+                borderColor = Color.gray
+            case .Matched:
+                borderColor = Color.green
+            case .Mismatched:
+                borderColor = Color.red
+            case .Selected:
+                borderColor = Color.blue
+            }
         }
         var body: some View {
             GeometryReader {
                 geometry in
                 ZStack {
                     RoundedRectangle(cornerRadius: geometry.size.width > 100 ? 10: 5)
-                        .stroke(Color.gray)
+                        .stroke(borderColor, lineWidth: 2.0)
                     VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0, content: {
                         ForEach(0..<card.number.rawValue){_ in
                             Group {
@@ -53,9 +67,27 @@
                         }
                     })
                     .padding(geometry.size.width > 100 ? 10: 5)
-                }.aspectRatio(ViewConstants.cardAspectRatio, contentMode: .fit)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        print("tapped on vstack inside cardview")
+                        viewModel.choose(card)
+                    }
+                }
+                .aspectRatio(ViewConstants.cardAspectRatio, contentMode: .fit)
                 .padding(3)
             }
         }
+        enum SelectionStatus {
+            case Selected
+            case Matched
+            case Mismatched
+            case None
+        }
+        static func == (lhs: CardView, rhs: CardView) -> Bool {
+            return lhs.card == rhs.card && lhs.borderColor == rhs.borderColor
+        }
+        func hash(into hasher: inout Hasher){
+            hasher.combine(card)
+            hasher.combine(borderColor)
+        }
     }
-    

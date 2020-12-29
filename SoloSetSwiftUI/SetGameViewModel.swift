@@ -22,10 +22,31 @@ class SetGameViewModel: ObservableObject {
     var cards: [Card] {
         game.dealtCards
     }
+    func selectionStatus(of card: Card) -> CardView.SelectionStatus {
+        let isSelected = game.selectedCards.contains(card)
+        var selectionStatus: CardView.SelectionStatus
+        if isSelected {
+            selectionStatus = .Selected
+            if game.selectedCards.count == 3 {
+                if game.selectedCardsFormASet {
+                    selectionStatus = .Matched
+                } else {
+                    selectionStatus = .Mismatched
+                }
+            }
+        } else {
+            selectionStatus = .None
+        }
+        return selectionStatus
+    }
     
     // MARK: intents
     func dealMoreCards(){
         game.dealThreeCards()
+        objectWillChange.send()
+    }
+    func choose(_ card: Card){
+        game.select(card: card)
         objectWillChange.send()
     }
 }
