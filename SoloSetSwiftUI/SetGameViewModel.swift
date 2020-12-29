@@ -39,14 +39,31 @@ class SetGameViewModel: ObservableObject {
         }
         return selectionStatus
     }
+    var numberOfCardsInDeck: Int {
+        game.deck.count
+    }
+    var score: Int {
+        game.score
+    }
     
     // MARK: intents
     func dealMoreCards(){
-        game.dealThreeCards()
+        if game.selectedCardsFormASet {
+            game.replaceSelectedCards()
+        } else {
+            game.dealThreeCards()
+        }
         objectWillChange.send()
     }
     func choose(_ card: Card){
         game.select(card: card)
+        objectWillChange.send()
+    }
+    func startNewGame(){
+        game = SetGame()
+        for _ in 1...4 {
+            game.dealThreeCards()
+        }
         objectWillChange.send()
     }
 }

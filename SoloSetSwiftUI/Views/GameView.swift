@@ -21,10 +21,15 @@ struct GameView: View {
             }
         }
         .padding(3)
-        
-        Button("Deal More Cards", action: {
-            setGameViewModel.dealMoreCards()
-        })
+        HStack {
+            Button("Deal More Cards"){
+                setGameViewModel.dealMoreCards()
+            }.disabled(setGameViewModel.numberOfCardsInDeck < 1)
+            Button("New Game"){
+                setGameViewModel.startNewGame()
+            }
+            Text("Score: \(setGameViewModel.score)")
+        }
     }
     func cardView(for card: Card) -> CardView {
         let cv = CardView(card: card, selectionStatus: setGameViewModel.selectionStatus(of: card), viewModel: setGameViewModel)

@@ -12,11 +12,13 @@
 import Foundation
 
 class SetGame {
+    
     private(set) var deck = [Card]()
     private(set) var dealtCards = [Card]()
     private(set) var selectedCards = [Card]()
     private(set) var removedCards = [Card]()
     private(set) var score = 0
+    
     let pointsPerSet = 3
     let pointsPenaltyPerMismatch = -5
     var lastSetFormedAtTime: Date?
@@ -73,8 +75,8 @@ class SetGame {
             }
         }
     }
-    init() {
-        //populate deck and shuffle
+    
+    func populateDeck(){
         for shape in Card.Shape.allCases {
             for shading in Card.Shading.allCases {
                 for number in Card.Number.allCases {
@@ -85,7 +87,11 @@ class SetGame {
                 }
             }
         }
-        deck.shuffle()
+    }
+    
+    init() {
+        populateDeck()
+//        deck.shuffle()
     }
     func select(card: Card){
         if selectedCards.count < 3 {
