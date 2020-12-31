@@ -92,7 +92,7 @@ class SetGame {
     
     init() {
         populateDeck()
-        //        deck.shuffle()
+        deck.shuffle()
     }
     func select(card: Card){
         if selectedCards.count < 3 {
