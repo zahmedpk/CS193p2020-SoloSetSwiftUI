@@ -22,6 +22,7 @@ class SetGame {
     let pointsPerSet = 3
     let pointsPenaltyPerMismatch = -5
     var lastSetFormedAtTime: Date?
+    let id = UUID()
     
     var selectedCardsFormASet : Bool {
         return isASet(in: selectedCards)
@@ -91,7 +92,7 @@ class SetGame {
     
     init() {
         populateDeck()
-//        deck.shuffle()
+        //        deck.shuffle()
     }
     func select(card: Card){
         if selectedCards.count < 3 {
@@ -121,32 +122,36 @@ class SetGame {
             if selectedCards.contains(card) && selectedCardsFormASet {
                 return
             }
-            if selectedCardsFormASet {
-                if deck.count >= 3 {//replace cards
-                    replaceSelectedCards()
-                } else {
-                    //cards cant be replaced, just removing
-                    for card in selectedCards {
-                        removedCards.append(card)
-                        if let i = dealtCards.firstIndex(of: card){
-                            dealtCards.remove(at: i)
-                        }
-                    }
-                }
-            }
             selectedCards.removeAll()
             selectedCards.append(card)
         }
     }
-    func replaceSelectedCards() {
-        if deck.count > 0 {
-        for i in dealtCards.indices {
-            if selectedCards.contains(dealtCards[i]) {
-                let newCard = deck.removeFirst()
-                removedCards.append(dealtCards[i])
-                dealtCards[i] = newCard
+    
+    func replaceMatchingCards(){
+        if selectedCardsFormASet {
+            if deck.count >= 3 {//replace cards
+                replaceSelectedCards()
+            } else {
+                //cards cant be replaced, just removing
+                for card in selectedCards {
+                    removedCards.append(card)
+                    if let i = dealtCards.firstIndex(of: card){
+                        dealtCards.remove(at: i)
+                    }
+                }
             }
         }
+    }
+    
+    func replaceSelectedCards() {
+        if deck.count > 0 {
+            for i in dealtCards.indices {
+                if selectedCards.contains(dealtCards[i]) {
+                    let newCard = deck.removeFirst()
+                    removedCards.append(dealtCards[i])
+                    dealtCards[i] = newCard
+                }
+            }
         } else {
             for i in dealtCards.indices {
                 if selectedCards.contains(dealtCards[i]) {

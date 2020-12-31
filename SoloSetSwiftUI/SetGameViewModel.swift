@@ -13,9 +13,6 @@ class SetGameViewModel: ObservableObject {
     @Published var game: SetGame
     init() {
         game = SetGame()
-        for _ in 1...4 {
-            game.dealThreeCards()
-        }
     }
     
     // MARK: access the model
@@ -45,25 +42,36 @@ class SetGameViewModel: ObservableObject {
     var score: Int {
         game.score
     }
+    var gameID: UUID {
+        game.id
+    }
     
     // MARK: intents
     func dealMoreCards(){
+        objectWillChange.send()
         if game.selectedCardsFormASet {
             game.replaceSelectedCards()
         } else {
             game.dealThreeCards()
         }
-        objectWillChange.send()
     }
     func choose(_ card: Card){
-        game.select(card: card)
         objectWillChange.send()
+        game.select(card: card)
+    }
+    func replaceMatchingCards(){
+        objectWillChange.send()
+        game.replaceMatchingCards()
     }
     func startNewGame(){
+        objectWillChange.send()
         game = SetGame()
+        dealCardsAtGameStart()
+    }
+    func dealCardsAtGameStart(){
+        objectWillChange.send()
         for _ in 1...4 {
             game.dealThreeCards()
         }
-        objectWillChange.send()
     }
 }

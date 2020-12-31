@@ -21,12 +21,22 @@ struct GameView: View {
             }
         }
         .padding(3)
+        .onAppear {
+            //deal out 12 cards at game start after grid appears
+            withAnimation(.easeInOut(duration: ViewConstants.durationForGameStartAnimation)) {
+                setGameViewModel.dealCardsAtGameStart()
+            }
+        }
         HStack {
             Button("Deal More Cards"){
-                setGameViewModel.dealMoreCards()
+                withAnimation(.easeInOut(duration: ViewConstants.durationForDealCardsAnimation)) {
+                    setGameViewModel.dealMoreCards()
+                }
             }.disabled(setGameViewModel.numberOfCardsInDeck < 1)
             Button("New Game"){
-                setGameViewModel.startNewGame()
+                withAnimation(.easeInOut(duration: ViewConstants.durationForGameStartAnimation)) {
+                    setGameViewModel.startNewGame()
+                }
             }
             Text("Score: \(setGameViewModel.score)")
         }

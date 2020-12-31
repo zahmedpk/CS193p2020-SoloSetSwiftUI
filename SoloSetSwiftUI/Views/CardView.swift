@@ -7,10 +7,7 @@
     import SwiftUI
     
     struct CardView: View, Identifiable, Hashable {
-        var id: Int {
-            return card.id
-        }
-        
+        let id: String
         // Draw a Card object
         // Card.Shape: .A is Diamond, .B is Rectangle, .C is Stadium
         // Card.Color: .A is Red, .B is Green, .C is Purple
@@ -19,7 +16,10 @@
         let color: Color
         let borderColor: Color
         let viewModel: SetGameViewModel
+        let gameID: String
         init(card: Card, selectionStatus: SelectionStatus, viewModel: SetGameViewModel) {
+            gameID = viewModel.gameID.uuidString
+            id = "\(gameID)-\(card.id)"
             self.card = card
             self.viewModel = viewModel
             switch card.color {
@@ -69,8 +69,12 @@
                     .padding(geometry.size.width > 100 ? 10: 5)
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        print("tapped on vstack inside cardview")
-                        viewModel.choose(card)
+                        if borderColor != .green {//Ignore matched cards tap
+                            withAnimation(Animation.easeOut(duration: ViewConstants.durationForMatchedCardsReplacement)) {
+                                viewModel.replaceMatchingCards()
+                            }
+                            viewModel.choose(card)
+                        }
                     }
                 }
                 .aspectRatio(ViewConstants.cardAspectRatio, contentMode: .fit)
@@ -84,10 +88,11 @@
             case None
         }
         static func == (lhs: CardView, rhs: CardView) -> Bool {
-            return lhs.card == rhs.card && lhs.borderColor == rhs.borderColor
+            return lhs.card == rhs.card && lhs.id == rhs.id &&
+                lhs.gameID == rhs.gameID && lhs.borderColor == rhs.borderColor
         }
         func hash(into hasher: inout Hasher){
-            hasher.combine(card)
-            hasher.combine(borderColor)
+            hasher.combine(card.id)
+            hasher.combine(gameID)
         }
     }
